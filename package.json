@@ -1,0 +1,17 @@
+{
+  "name": "windows-eventreader",
+  "version": "0.0.2",
+  "description": "none yet",
+  "main": "build/Release/EventReader.node",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "node-gyp rebuild"
+  },
+  "author": {
+    "name": "svennergr@gmail.com"
+  },
+  "license": "MIT",
+  "gypfile": true,
+  "_id": "windows-eventreader@0.0.1",
+  "_from": "windows-eventreader@"
+}
