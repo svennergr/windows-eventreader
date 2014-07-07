@@ -1,6 +1,6 @@
 {
   "name": "windows-eventreader",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "none yet",
   "main": "build/Release/EventReader.node",
   "scripts": {
