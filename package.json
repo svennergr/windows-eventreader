@@ -1,6 +1,6 @@
 {
   "name": "windows-eventreader",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "none yet",
   "main": "build/Release/EventReader.node",
   "scripts": {
@@ -11,6 +11,10 @@
     "name": "svennergr@gmail.com"
   },
   "license": "MIT",
+  "repository" : {
+	"type" : "git",
+	"url" : "https://github.com/svennergr/windows-eventreader.git"
+  },
   "gypfile": true,
   "_id": "windows-eventreader@0.0.1",
   "_from": "windows-eventreader@"
