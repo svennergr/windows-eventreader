@@ -2,9 +2,9 @@
   "targets": [
     {
       "target_name": "EventReader",
-      "sources": [ "src/EventReader.cpp" ],
 	  'conditions': [
           ['OS=="win"', {
+			"sources": [ "src/EventReader.cpp" ],
             'msvs_settings': {
               'VCCLCompilerTool': {                  
                 'RuntimeTypeInfo':'true',
