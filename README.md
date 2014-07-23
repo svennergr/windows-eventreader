@@ -7,9 +7,7 @@ windows-eventreader
 Version
 ----
 
-0.0.3
-
-Tech
+0.0.7Tech
 ====
 
 To get things work, you will need:
