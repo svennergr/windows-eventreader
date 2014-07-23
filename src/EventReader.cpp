@@ -48,7 +48,6 @@ Handle<Value> readLog(const Arguments& args) {
 		TimeSpan ts = TimeSpan::FromMilliseconds(dateTill->NumberValue());
 		dateTimeTill=dateTimeTill->Add(ts);
 	}
-	Console::WriteLine(dateTimeFrom != nullptr);
 
 	Handle<v8::String> v8LogName = args[0]->ToString();
 
@@ -70,7 +69,6 @@ Handle<Value> readLog(const Arguments& args) {
 			log->Set(v8::String::NewSymbol("displayName"), v8::String::NewSymbol(managedStringToStdString(myLog->LogDisplayName).c_str()));
 			log->Set(v8::String::NewSymbol("logName"), v8::String::NewSymbol(managedStringToStdString(myLog->Log).c_str()));
 			log->Set(v8::String::NewSymbol("entries"), v8::Number::New(myLog->Entries->Count));
-			Console::WriteLine("read" + myEntry->Category);
 
 			log->Set(v8::String::NewSymbol("category"), v8::String::NewSymbol(managedStringToStdString(myEntry->Category).c_str()));
 			log->Set(v8::String::NewSymbol("entryType"), v8::String::NewSymbol(managedStringToStdString(myEntry->EntryType.ToString()).c_str()));
@@ -90,7 +88,6 @@ Handle<Value> readLog(const Arguments& args) {
 			if (myEntry->TimeGenerated.CompareTo(dateTimeTill)>0)
 				continue;
 
-			Console::WriteLine("setting log " + myEntry->Message);
 			logs->Set(i++, log);
 
 
@@ -113,7 +110,7 @@ Handle<Value> readLog(const Arguments& args) {
 
 			log->Set(v8::String::NewSymbol("category"), v8::String::NewSymbol(managedStringToStdString(myEntry->Category).c_str()));
 			log->Set(v8::String::NewSymbol("entryType"), v8::String::NewSymbol(managedStringToStdString(myEntry->EntryType.ToString()).c_str()));
-			Console::WriteLine('u'+myEntry->UserName);
+
 			try{
 				log->Set(v8::String::NewSymbol("userName"), v8::String::NewSymbol(managedStringToStdString(myEntry->UserName).c_str()));
 				log->Set(v8::String::NewSymbol("machineName"), v8::String::NewSymbol(managedStringToStdString(myEntry->MachineName).c_str()));
